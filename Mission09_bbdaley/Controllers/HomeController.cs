@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Mission09_bbdaley.Models;
+using Mission09_bbdaley.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,14 +32,24 @@ namespace Mission09_bbdaley.Controllers
 
         public IActionResult Index(int pageNum = 1)
         {
-            int pageSize = 5;
+            int pageSize = 10;
 
-            var home = repo.Books
+            var booksbaby = new BooksViewModel
+            {
+                Books = repo.Books
                 .OrderBy(b => b.Title)
-                .Skip((pageNum -1) * pageSize)
-                .Take(pageSize);
+                .Skip((pageNum - 1) * pageSize)
+                .Take(pageSize),
 
-            return View(home);
+                PageInfo = new PageInfo
+                {
+                    TotalNumBooks = repo.Books.Count(),
+                    BooksPerPage = pageSize,
+                    CurrentPage = pageNum
+                }
+            };
+
+            return View(booksbaby);
         }
     }
 }
