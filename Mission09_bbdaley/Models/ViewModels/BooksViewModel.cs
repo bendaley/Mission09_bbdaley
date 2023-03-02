@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Mission09_bbdaley.Models.ViewModels
 {
+    // create books and pageinfo in this sub-viewmodel
     public class BooksViewModel
     {
         public IQueryable<Book> Books { get; set; }

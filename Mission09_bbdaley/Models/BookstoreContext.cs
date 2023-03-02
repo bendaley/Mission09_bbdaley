@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Mission09_bbdaley.Models
 {
+    // database setup
     public class BookstoreContext : DbContext
     {
         public BookstoreContext()

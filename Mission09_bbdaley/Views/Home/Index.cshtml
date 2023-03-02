@@ -7,6 +7,7 @@
 
 <h1>The Bookstore</h1>
 
+<!-- some new styling and display of book info -->
 @foreach (Book b in Model.Books)
 {
 <div class="card card-outline-primary m-1 p-1">
@@ -35,7 +36,7 @@
      page-class-selected="btn-primary" class="btn-group pull-right m-1">
 </div>
 
-<!--
+<!-- old - just referencing as notes
 <a asp-action="Index" asp-route-pageNum="1">1</a>
 <a asp-action="Index" asp-route-pageNum="2">2</a>
 <a asp-action="Index" asp-route-pageNum="3">3</a>

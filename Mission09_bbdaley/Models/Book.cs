@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Mission09_bbdaley.Models
 {
+    // get and set all the variables we'll be tracking about the books
     public partial class Book
     {
         [Key]

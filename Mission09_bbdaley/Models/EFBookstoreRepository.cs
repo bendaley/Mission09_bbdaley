@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Mission09_bbdaley.Models
 {
+    // repository set-up
     public class EFBookstoreRepository : IBookstoreRepository
     {
         private BookstoreContext context { get; set; }

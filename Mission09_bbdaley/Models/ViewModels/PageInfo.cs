@@ -7,6 +7,7 @@ namespace Mission09_bbdaley.Models.ViewModels
 {
     public class PageInfo
     {
+        // create variables to help determine page display
         public int TotalNumBooks { get; set; }
         public int BooksPerPage { get; set; }
         public int CurrentPage { get; set; }

@@ -21,6 +21,8 @@ namespace Mission09_bbdaley.Controllers
             repo = temp;
         }
 
+        // old - just referencing for notes
+
         /*
         public IActionResult Index()
         {
@@ -30,6 +32,7 @@ namespace Mission09_bbdaley.Controllers
         }
         */
 
+        // set-up everything to receive needed variables to determine page number/display
         public IActionResult Index(int pageNum = 1)
         {
             int pageSize = 10;
