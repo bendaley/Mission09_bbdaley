@@ -46,7 +46,7 @@ namespace Mission09_bbdaley
                 app.UseDeveloperExceptionPage();
             }
 
-            // correstponds to wwwroot
+            // corresponds to wwwroot
             app.UseStaticFiles();
 
             app.UseRouting();
