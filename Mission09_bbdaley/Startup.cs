@@ -53,6 +53,12 @@ namespace Mission09_bbdaley
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "Paging",
+                    pattern: "Page{pageNum}",
+                    defaults: new { Controller = "Home", action = "Index" });
+
+                // first entry ^^ will be executed, not this one
                 endpoints.MapDefaultControllerRoute();
             });
         }
