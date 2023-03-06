@@ -47,14 +47,14 @@ namespace Mission09_bbdaley.Infrastructure
                 tb.Attributes["href"] = uh.Action(PageAction, new { pageNum = i });
                 tb.InnerHtml.Append(i.ToString());
 
-                /*
+                
                 if (PageClassesEnabled)
                 {
-                    tag.AddCssClass(PageClass);
-                    tag.AddCssClass(i == PageModel.CurrentPage
+                    tb.AddCssClass(PageClass);
+                    tb.AddCssClass(i == PageBlah.CurrentPage
                         ? PageClassSelected : PageClassNormal);
                 }
-                */
+                
 
                 final.InnerHtml.AppendHtml(tb);
             }
