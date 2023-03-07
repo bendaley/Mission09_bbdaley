@@ -18,8 +18,9 @@ namespace Mission09_bbdaley.Pages
         }
         public Basket basket { get; set; }
         
-        public void OnGet()
+        public void OnGet(Basket bask)
         {
+            basket = bask;
         }
 
         public IActionResult OnPost(int bookid)
@@ -29,7 +30,7 @@ namespace Mission09_bbdaley.Pages
             basket = new Basket();
             basket.AddItem(b, 1);
 
-            return RedirectToPage();
+            return RedirectToPage(basket);
         }
     }
 }
