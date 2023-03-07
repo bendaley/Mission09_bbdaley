@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Mission09_bbdaley.Infrastructure;
 using Mission09_bbdaley.Models;
 
 namespace Mission09_bbdaley.Pages
@@ -18,17 +19,19 @@ namespace Mission09_bbdaley.Pages
         }
         public Basket basket { get; set; }
         
-        public void OnGet(Basket bask)
+        public void OnGet()
         {
-            basket = bask;
+            basket = HttpContext.Session.GetJson<Basket>("basket") ?? new Basket();
         }
 
         public IActionResult OnPost(int bookid)
         {
             Book b = repo.Books.FirstOrDefault(x => x.BookId == bookid);
 
-            basket = new Basket();
+            basket = HttpContext.Session.GetJson<Basket>("basket") ?? new Basket();
             basket.AddItem(b, 1);
+
+            HttpContext.Session.SetJson("basket", basket);
 
             return RedirectToPage(basket);
         }
