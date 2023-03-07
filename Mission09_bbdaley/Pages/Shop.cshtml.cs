@@ -12,5 +12,9 @@ namespace Mission09_bbdaley.Pages
         public void OnGet()
         {
         }
+
+        public void OnPost()
+        {
+        }
     }
 }
