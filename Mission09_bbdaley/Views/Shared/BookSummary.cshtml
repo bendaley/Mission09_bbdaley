@@ -31,7 +31,8 @@
             <input type="hidden" asp-for="@Model.BookId" />
             <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
 
-            <span class="card-text">
+            <span class="card-text btn-group float-end">
+                <button type="button" class="btn btn-secondary" color="red">Press this button if you want nothing to happen</button>
                 <button type="submit" class="btn btn-success btn-sm float-end">Add to Cart</button>
             </span>
         </form>
