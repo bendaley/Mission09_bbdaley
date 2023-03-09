@@ -18,13 +18,15 @@ namespace Mission09_bbdaley.Pages
             repo = temp;
         }
         public Basket basket { get; set; }
+        public string ReturnUrl { get; set; }
         
-        public void OnGet()
+        public void OnGet(string returnUrl)
         {
+            ReturnUrl = returnUrl ?? "/";
             basket = HttpContext.Session.GetJson<Basket>("basket") ?? new Basket();
         }
 
-        public IActionResult OnPost(int bookid)
+        public IActionResult OnPost(int bookid, string returnUrl)
         {
             Book b = repo.Books.FirstOrDefault(x => x.BookId == bookid);
 
@@ -33,7 +35,7 @@ namespace Mission09_bbdaley.Pages
 
             HttpContext.Session.SetJson("basket", basket);
 
-            return RedirectToPage(basket);
+            return RedirectToPage(new { ReturnUrl = returnUrl });
         }
     }
 }
