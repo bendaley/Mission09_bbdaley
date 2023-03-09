@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// tag helpers page! Helps with navigation among other things
+
 namespace Mission09_bbdaley.Infrastructure
 {
     [HtmlTargetElement("div", Attributes = "page-blah")]

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// basket class to be able to add up prices/quantities of the books
+
 namespace Mission09_bbdaley.Models
 {
     public class Basket

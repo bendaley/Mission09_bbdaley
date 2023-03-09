@@ -3,6 +3,8 @@
 
 @model Book
 
+<!-- page that displays all the books & allows for navigation -->
+
 <div class="card card-outline-primary m-1 p-1">
     <div class="bg-faded p-1">
         <h4>
@@ -32,6 +34,7 @@
         <input type="hidden" asp-for="@Model.BookId" />
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
 
+        <!-- extra bootstrap #1 -->
         <span class="card-text btn-group float-end">
             <button type="button" class="btn btn-secondary" color="red">Press this button if you want nothing to happen</button>
             <button type="submit" class="btn btn-success btn-sm float-end">Add to Cart</button>
