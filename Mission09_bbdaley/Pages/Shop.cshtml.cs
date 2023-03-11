@@ -23,17 +23,17 @@ namespace Mission09_bbdaley.Pages
         public void OnGet(string returnUrl)
         {
             ReturnUrl = returnUrl ?? "/";
-            basket = HttpContext.Session.GetJson<Basket>("basket") ?? new Basket();
+            // basket = HttpContext.Session.GetJson<Basket>("basket") ?? new Basket();
         }
 
         public IActionResult OnPost(int bookid, string returnUrl)
         {
             Book b = repo.Books.FirstOrDefault(x => x.BookId == bookid);
 
-            basket = HttpContext.Session.GetJson<Basket>("basket") ?? new Basket();
+            // basket = HttpContext.Session.GetJson<Basket>("basket") ?? new Basket();
             basket.AddItem(b, 1);
 
-            HttpContext.Session.SetJson("basket", basket);
+            // HttpContext.Session.SetJson("basket", basket);
 
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
