@@ -21,6 +21,7 @@ namespace Mission09_bbdaley.Models
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
     }
 }
 

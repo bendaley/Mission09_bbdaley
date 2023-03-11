@@ -34,6 +34,6 @@ namespace Mission09_bbdaley.Models
         [Required(ErrorMessage = "Please enter a country: ")]
         public string Country { get; set; }
 
-        // public bool Anonymous { get; set; }
+        public bool Gift { get; set; }
     }
 }
