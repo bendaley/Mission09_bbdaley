@@ -37,5 +37,10 @@ namespace Mission09_bbdaley.Pages
 
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
+
+        public IActionResult OnPostRemove()
+        {
+
+        }
     }
 }
