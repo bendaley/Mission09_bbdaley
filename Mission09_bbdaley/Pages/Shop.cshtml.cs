@@ -12,14 +12,16 @@ namespace Mission09_bbdaley.Pages
     public class ShopModel : PageModel
     {
         private IBookstoreRepository repo { get; set; }
-
-        public ShopModel (IBookstoreRepository temp)
-        {
-            repo = temp;
-        }
         public Basket basket { get; set; }
         public string ReturnUrl { get; set; }
+
+        public ShopModel (IBookstoreRepository temp, Basket bask)
+        {
+            repo = temp;
+            basket = bask;
+        }
         
+                
         public void OnGet(string returnUrl)
         {
             ReturnUrl = returnUrl ?? "/";
@@ -38,9 +40,11 @@ namespace Mission09_bbdaley.Pages
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
 
-        public IActionResult OnPostRemove()
+        public IActionResult OnPostRemove(int bookId, string returnUrl)
         {
+            basket.RemoveItem(basket.Items.First(x => x.Book.BookId == bookId).Book);
 
+            return RedirectToPage(new { ReturnUrl = returnUrl });
         }
     }
 }
