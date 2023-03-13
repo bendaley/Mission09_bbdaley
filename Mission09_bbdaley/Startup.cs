@@ -32,7 +32,7 @@ namespace Mission09_bbdaley
 
             services.AddDbContext<BookstoreContext>(options =>
             {
-                options.UseSqlite(Configuration["ConnectionStrings:BooksDBConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:BooksDBConnection"]);                
             });
 
             services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();

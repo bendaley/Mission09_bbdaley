@@ -9,7 +9,7 @@ using Mission09_bbdaley.Models;
 namespace Mission09_bbdaley.Migrations
 {
     [DbContext(typeof(BookstoreContext))]
-    [Migration("20230311023156_AddPurchasesTable")]
+    [Migration("20230313164414_AddPurchasesTable")]
     partial class AddPurchasesTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

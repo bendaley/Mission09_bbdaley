@@ -25,6 +25,7 @@ namespace Mission09_bbdaley.Models
     }
 }
 
+// old stuff
 
 /*
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
