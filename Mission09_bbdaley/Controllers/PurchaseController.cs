@@ -38,7 +38,9 @@ namespace Mission09_bbdaley.Controllers
                 repo.SavePurchase(purchase);
                 basket.ClearBasket();
 
+                //return RedirectToPage("/PurchaseCompleted");
                 return RedirectToPage("/PurchaseCompleted");
+
             }
             else
             {
