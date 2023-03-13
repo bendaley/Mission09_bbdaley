@@ -9,9 +9,18 @@ namespace Mission09_bbdaley.Controllers
 {
     public class PurchaseController : Controller
     {
+        public class PurchaseController
+
+        [HttpGet]
         public IActionResult Checkout()
         {
             return View(new Purchase());
+        }
+
+        [HttpPost]
+        public IActionResult Checkout(Purchase purchase)
+        {
+            return 
         }
     }
 }
