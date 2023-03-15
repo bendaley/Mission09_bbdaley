@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// kept the cart code from the book for reference & a study tool
 
 namespace Mission09_bbdaley.Components
 {

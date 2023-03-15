@@ -5,6 +5,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
+// set-up of the purchase model
+
 namespace Mission09_bbdaley.Models
 {
     public class Purchase

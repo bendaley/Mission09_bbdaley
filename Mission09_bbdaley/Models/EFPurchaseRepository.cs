@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// set-up to tie the purchases, lines, and books
+
 namespace Mission09_bbdaley.Models
 {
     public class EFPurchaseRepository : IPurchaseRepository
